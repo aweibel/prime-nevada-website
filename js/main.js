@@ -23,17 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // Verify reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                alert('Please complete the reCAPTCHA verification');
-                return;
-            }
-
-            const formData = new FormData(contactForm);
-            formData.append('g-recaptcha-response', recaptchaResponse);
-
             try {
+                // Execute reCAPTCHA v3
+                const token = await grecaptcha.execute('6LffS7sqAAAAAPBAS4QXbpNKCYtG-1W15Wb7Nosq', {action: 'submit'});
+                
+                const formData = new FormData(contactForm);
+                formData.append('g-recaptcha-response', token);
+
                 const response = await fetch('/submit-form', {
                     method: 'POST',
                     body: formData
@@ -42,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok) {
                     alert('Thank you for your message. We will get back to you soon!');
                     contactForm.reset();
-                    grecaptcha.reset();
                 } else {
-                    alert('There was an error sending your message. Please try again later.');
+                    const data = await response.json();
+                    alert(data.error || 'There was an error sending your message. Please try again later.');
                 }
             } catch (error) {
                 console.error('Error:', error);

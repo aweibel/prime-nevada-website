@@ -30,7 +30,13 @@ async function verifyRecaptcha(token) {
                 response: token
             }
         });
-        return response.data.success;
+        
+        // For v3, we need to check both success and score
+        if (response.data.success) {
+            // Threshold of 0.5 is recommended by Google
+            return response.data.score >= 0.5;
+        }
+        return false;
     } catch (error) {
         console.error('reCAPTCHA verification error:', error);
         return false;

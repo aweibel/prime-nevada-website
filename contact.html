@@ -5,41 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Prime Nevada</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LffS7sqAAAAAPBAS4QXbpNKCYtG-1W15Wb7Nosq"></script>
 </head>
 <body>
     <header>
         <nav>
             <a href="/" class="logo">PRIME NEVADA</a>
             <ul>
-                <li><a href="/firm.html">The Firm</a></li>
-                <li><a href="/what-we-do.html">What We Do</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/firm.html">THE FIRM</a></li>
+                <li><a href="/what-we-do.html">WHAT WE DO</a></li>
+                <li><a href="/contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our team to discuss investment opportunities.</p>
+            <img src="images/contact-hero.jpg" alt="Prime Nevada office" class="hero-background">
+            <div class="hero-content">
+                <h1>Let's Connect</h1>
+                <p>Whether you're a founder seeking partnership or an investor interested in our approach, we'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="feature-content">
+                <h2>Get in Touch</h2>
+                <p>We're always looking to connect with innovative founders, fellow investors, and potential partners who share our vision for building exceptional companies in Nevada.</p>
+            </div>
+            <div class="feature-image">
+                <img src="images/contact-office.jpg" alt="Prime Nevada office space">
+            </div>
         </section>
 
         <section class="section">
             <div class="contact-form">
                 <form id="contactForm" action="/submit-form" method="POST">
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
+                        <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
+                        <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="company">Company Name</label>
+                        <label for="company">Company</label>
                         <input type="text" id="company" name="company">
                     </div>
                     
@@ -48,12 +61,25 @@
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-                    </div>
-
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit">Submit</button>
                 </form>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>Las Vegas</h3>
+                    <p>Headquarters</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Response Time</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Global</h3>
+                    <p>Network</p>
+                </div>
             </div>
         </section>
     </main>
@@ -62,7 +88,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Prime Nevada</h4>
-                <p>Building lasting value through thoughtful investment</p>
+                <p>Building lasting value through thoughtful investment in Nevada's future</p>
             </div>
             <div class="footer-section">
                 <h4>Contact</h4>
@@ -70,7 +96,7 @@
                 <p>Location: Las Vegas, Nevada</p>
             </div>
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h4>Navigation</h4>
                 <ul>
                     <li><a href="/firm.html">The Firm</a></li>
                     <li><a href="/what-we-do.html">What We Do</a></li>
