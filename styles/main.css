@@ -275,6 +275,25 @@ button:hover {
     color: var(--primary-color);
 }
 
+.form-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-footer small {
+    color: #666;
+    font-size: 0.8em;
+}
+
+.form-footer a {
+    color: #444;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);

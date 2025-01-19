@@ -20,32 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
+        contactForm.addEventListener('submit', (e) => {
+            // Show loading state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
 
-            try {
-                // Execute reCAPTCHA v3
-                const token = await grecaptcha.execute('6LffS7sqAAAAAPBAS4QXbpNKCYtG-1W15Wb7Nosq', {action: 'submit'});
-                
-                const formData = new FormData(contactForm);
-                formData.append('g-recaptcha-response', token);
-
-                const response = await fetch('/submit-form', {
-                    method: 'POST',
-                    body: formData
-                });
-
-                if (response.ok) {
-                    alert('Thank you for your message. We will get back to you soon!');
-                    contactForm.reset();
-                } else {
-                    const data = await response.json();
-                    alert(data.error || 'There was an error sending your message. Please try again later.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('There was an error sending your message. Please try again later.');
-            }
+            // Form will be handled by FormSubmit.co
+            // Re-enable the button after a short delay
+            setTimeout(() => {
+                submitButton.textContent = 'Send Message';
+                submitButton.disabled = false;
+            }, 2000);
         });
     }
 
