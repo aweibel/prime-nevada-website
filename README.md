@@ -1,109 +1,127 @@
-# Prime Nevada Website
+# Prime Nevada Website 🏢
 
-This is the repository for the Prime Nevada website. The project uses HTML5, CSS3, and vanilla JavaScript to create a modern, responsive website.
+[![Static Site](https://img.shields.io/badge/Website-Static-blue)](https://primenevada.com)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![WCAG 2.1 Level AA](https://img.shields.io/badge/WCAG_2.1-Level_AA-green)](https://www.w3.org/WAI/WCAG21/quickref/)
 
-## Project Structure
+Modern, responsive website for Prime Nevada, built with pure HTML, CSS, and JavaScript. Our site emphasizes clean design, fast performance, and excellent user experience while maintaining WCAG 2.1 Level AA accessibility standards.
+
+![Prime Nevada Website Preview](images/hero-bg.jpg)
+
+## 🌟 Features
+
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Modern UI**: Clean, professional aesthetic with smooth animations
+- **Fast Loading**: No framework dependencies, pure vanilla implementation
+- **Contact Form**: Secure form handling via FormSubmit.co
+- **Mobile-First**: Touch-friendly navigation and layout
+- **Accessibility**: WCAG 2.1 Level AA compliant with:
+  - Proper ARIA labels and roles
+  - Keyboard navigation support
+  - Color contrast compliance
+  - Screen reader optimization
+  - Focus management
+  - Alternative text for images
+
+## 📁 Project Structure
 
 ```
 primenevada/
-├── index.html          # Main HTML file
+├── index.html          # Home page
 ├── firm.html          # The Firm page
-├── what-we-do.html    # What We Do page
+├── what-we-do.html    # Services page
 ├── contact.html       # Contact page
+├── thank-you.html     # Form submission success page
 ├── styles/
 │   └── main.css       # Main stylesheet
 ├── js/
-│   └── main.js        # JavaScript functionality
-├── images/            # Image assets
-├── .env              # Environment variables (not in repo)
-├── .env.example      # Example environment configuration
-├── .gitignore        # Git ignore rules
-├── DEPLOYMENT.md     # Deployment instructions
-└── README.md         # Project documentation
+│   └── main.js        # Client-side JavaScript
+└── images/            # Image assets
 ```
 
-## Getting Started
+## 🚀 Quick Start
 
-1. Clone the repository:
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/yourusername/primenevada.git
+   cd primenevada
    ```
 
-2. Install dependencies:
+2. **Local Development**
+   - Use a local server (e.g., Live Server in VS Code)
+   - Or use Python's built-in server:
+     ```bash
+     python -m http.server 8000
+     ```
+   - Visit `http://localhost:8000` in your browser
+
+## 💻 Development
+
+### Prerequisites
+- Basic understanding of HTML, CSS, and JavaScript
+- A modern web browser
+- A text editor (VS Code recommended)
+
+### Best Practices
+- Follow semantic HTML5 markup
+- Maintain mobile-first responsive design
+- Keep JavaScript minimal and unobtrusive
+- Optimize images before committing
+- Test across multiple browsers
+- Ensure accessibility compliance:
+  - Test with screen readers (VoiceOver, NVDA)
+  - Verify keyboard navigation
+  - Check color contrast ratios
+  - Validate ARIA attributes
+  - Use semantic HTML elements
+
+## 🔒 Security Features
+
+- **Form Protection**: 
+  - Honeypot fields
+  - CAPTCHA verification
+  - Secure form processing via FormSubmit.co
+
+- **Content Security**:
+  - No sensitive data in repository
+  - Secure external service integration
+  - HTTPS enforcement
+
+## 📝 Making Changes
+
+1. Create a new branch for your changes
    ```bash
-   npm install
+   git checkout -b feature/your-feature-name
    ```
 
-3. Set up environment variables:
+2. Make your changes and test locally
+
+3. Commit with clear, descriptive messages
    ```bash
-   cp .env.example .env
+   git commit -m "Add: Brief description of changes"
    ```
-   Then edit `.env` with your actual values.
 
-4. Start the development server:
+4. Push and create a pull request
    ```bash
-   npm run dev
+   git push origin feature/your-feature-name
    ```
 
-## Features
+## 🌐 Deployment
 
-- Responsive design
-- Modern UI
-- Smooth scroll navigation
-- Mobile-friendly layout
-- Contact form with reCAPTCHA protection
-- Email notifications
+1. Upload files to your web hosting service
+2. Ensure all files maintain their structure
+3. Configure proper MIME types
+4. Enable HTTPS
+5. Test all forms and links
 
-## Security
+## 📫 Contact
 
-### Environment Variables
-- NEVER commit the `.env` file to the repository
-- Use `.env.example` as a template
-- Keep production credentials separate from development
-- See `DEPLOYMENT.md` for secure deployment instructions
+For questions or support:
+- 📧 Email: info@primenevada.com
+- 🌐 Website: [primenevada.com](https://primenevada.com)
 
-### Credentials Management
-1. reCAPTCHA keys
-   - Get from Google reCAPTCHA admin console
-   - Use v3 implementation
-   - Keep secret key secure
+## ⚖️ License
 
-2. Email Configuration
-   - Use app-specific passwords
-   - Rotate credentials regularly
-   - Monitor for unauthorized access
-
-### GitHub Security
-- Repository includes `.gitignore` to prevent committing sensitive files
-- Regular security updates via Dependabot
-- Code scanning enabled for vulnerability detection
-
-## Deployment
-
-See `DEPLOYMENT.md` for detailed deployment instructions, including:
-- Setting up on GoDaddy
-- Configuring environment variables
-- Security best practices
-- Monitoring and maintenance
-
-## Development Guidelines
-
-1. Security
-   - Never commit sensitive data
-   - Keep dependencies updated
-   - Follow security best practices
-
-2. Environment Variables
-   - Use `.env` for local development
-   - Use GoDaddy's environment configuration in production
-   - Keep backup of production credentials in a secure location
-
-## Support
-
-For security concerns or questions, contact:
-- Email: info@primenevada.com
-- Subject: "Security: [Your Concern]"
-
-## License
-
-All rights reserved. This project is proprietary and confidential.
+© 2024 Prime Nevada. All rights reserved. This project is proprietary and confidential.
