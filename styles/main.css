@@ -216,6 +216,8 @@ nav ul li a:hover {
     overflow: hidden;
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px;
 }
 
 .hero-background {
@@ -267,6 +269,8 @@ nav ul li a:hover {
     overflow: hidden;
     aspect-ratio: 16/9;
     transition: transform 0.3s ease;
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px;
 }
 
 .portfolio-item:hover {
@@ -328,6 +332,8 @@ nav ul li a:hover {
     gap: 4rem;
     max-width: 1400px;
     margin: 0 auto;
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px;
 }
 
 .feature-section:nth-child(odd) {
@@ -480,6 +486,18 @@ textarea[aria-invalid="true"] {
 }
 
 @media (max-width: 768px) {
+    h1, .h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2, .h2 {
+        font-size: 2rem;
+    }
+    
+    h3, .h3 {
+        font-size: 1.75rem;
+    }
+    
     nav ul {
         flex-direction: column;
         text-align: center;
@@ -518,7 +536,6 @@ h2 {
 /* Ensure proper spacing for readability */
 p {
     margin-bottom: 1.5rem;
-    max-width: 70ch; /* Optimal line length for readability */
 }
 
 /* Improved link styles */
@@ -680,4 +697,24 @@ a:hover {
     h4, .h4 {
         font-size: 1.25rem;
     }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+.thank-you-content {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.thank-you-content h1 {
+    margin-bottom: 1.5rem;
+}
+
+.thank-you-content p {
+    margin-bottom: 2rem;
+    color: var(--color-text-primary);
 }

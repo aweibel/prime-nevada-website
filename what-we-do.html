@@ -8,18 +8,56 @@ LICENSE.md file in the root directory of this source tree.
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What We Do - Prime Nevada</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <script type="module" src="components/navigation/navigation.js"></script>
-    <script type="module" src="components/footer/footer.js"></script>
-    <script type="module" src="js/main.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Performance Optimizations -->
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+         
+        <!-- Resource Hints -->
+        <link rel="preload" href="styles/main.css" as="style">
+        <link rel="preload" href="components/navigation/navigation.js" as="script">
+        <link rel="preload" href="components/footer/footer.js" as="script">
+        <link rel="preload" href="js/main.js" as="script">
+
+        <!-- SEO Meta Tags -->
+        <title>Our Investment Approach | Prime Nevada</title>
+        <meta name="description" content="Explore Prime Nevada's investment services, portfolio strategy, and focus areas. From commercial real estate to development projects, discover how we create value in Nevada's dynamic market.">
+        <meta name="keywords" content="Prime Nevada services, Nevada investment opportunities, commercial real estate investment, property development, Las Vegas investments">
+        <meta name="author" content="Prime Nevada">
+        <link rel="canonical" href="https://primenevada.com/what-we-do">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://primenevada.com/what-we-do">
+        <meta property="og:title" content="Our Investment Approach | Prime Nevada">
+        <meta property="og:description" content="Explore Prime Nevada's investment services, portfolio strategy, and focus areas. From commercial real estate to development projects, discover how we create value in Nevada's dynamic market.">
+        <meta property="og:image" content="https://primenevada.com/images/prime-nevada-services-og.jpg">
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://primenevada.com/what-we-do">
+        <meta name="twitter:title" content="Our Investment Approach | Prime Nevada">
+        <meta name="twitter:description" content="Explore Prime Nevada's investment services, portfolio strategy, and focus areas. From commercial real estate to development projects, discover how we create value in Nevada's dynamic market.">
+        <meta name="twitter:image" content="https://primenevada.com/images/prime-nevada-services-og.jpg">
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+        
+        <!-- Components -->
+        <script type="module" src="components/navigation/navigation.js" defer></script>
+        <script type="module" src="components/footer/footer.js" defer></script>
+        <script type="module" src="js/main.js" defer></script>
+    </head>
 <body>
     <header>
         <prime-navigation></prime-navigation>

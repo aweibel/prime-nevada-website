@@ -8,18 +8,56 @@ LICENSE.md file in the root directory of this source tree.
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Prime Nevada</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <script type="module" src="components/navigation/navigation.js"></script>
-    <script type="module" src="components/footer/footer.js"></script>
-    <script type="module" src="js/main.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+        <!-- Performance Optimizations -->
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+         
+        <!-- Resource Hints -->
+        <link rel="preload" href="styles/main.css" as="style">
+        <link rel="preload" href="components/navigation/navigation.js" as="script">
+        <link rel="preload" href="components/footer/footer.js" as="script">
+        <link rel="preload" href="js/main.js" as="script">
+
+        <!-- SEO Meta Tags -->
+        <title>Contact Prime Nevada | Investment Inquiries</title>
+        <meta name="description" content="Get in touch with Prime Nevada's investment team. Whether you're looking to discuss investment opportunities or learn more about our services, we're here to help.">
+        <meta name="keywords" content="contact Prime Nevada, investment inquiries, Nevada investment contact, Las Vegas investment firm contact">
+        <meta name="author" content="Prime Nevada">
+        <link rel="canonical" href="https://primenevada.com/contact">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://primenevada.com/contact">
+        <meta property="og:title" content="Contact Prime Nevada | Investment Inquiries">
+        <meta property="og:description" content="Get in touch with Prime Nevada's investment team. Whether you're looking to discuss investment opportunities or learn more about our services, we're here to help.">
+        <meta property="og:image" content="https://primenevada.com/images/prime-nevada-contact-og.jpg">
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://primenevada.com/contact">
+        <meta name="twitter:title" content="Contact Prime Nevada | Investment Inquiries">
+        <meta name="twitter:description" content="Get in touch with Prime Nevada's investment team. Whether you're looking to discuss investment opportunities or learn more about our services, we're here to help.">
+        <meta name="twitter:image" content="https://primenevada.com/images/prime-nevada-contact-og.jpg">
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+        
+       <!-- Styles -->
+       <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'">
+       <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+       
+       <!-- Components -->
+       <script type="module" src="components/navigation/navigation.js" defer></script>
+       <script type="module" src="components/footer/footer.js" defer></script>
+       <script type="module" src="js/main.js" defer></script>
+    </head>
 <body>
     <header>
         <prime-navigation></prime-navigation>
@@ -46,18 +84,12 @@ LICENSE.md file in the root directory of this source tree.
 
         <section class="section">
             <div class="contact-form">
-                <form id="contactForm" action="https://formsubmit.co/e5c7f883d84ddc1f31d865795df8900d" method="POST">
+                <form id="contactForm" action="/submit-form.php" method="POST">
                     <!-- Honeypot -->
                     <input type="text" name="_honey" style="display: none;">
                     
-                    <!-- Disable Captcha -->
-                    <input type="hidden" name="_captcha" value="true">
-                    
-                    <!-- Success Page -->
-                    <input type="hidden" name="_next" value="https://primenevada.com/thank-you">
-                    
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required pattern="[A-Za-z\s]{2,}" title="Please enter a valid name (minimum 2 characters, letters only)">
                     </div>
                     
                     <div class="form-group">
@@ -69,10 +101,10 @@ LICENSE.md file in the root directory of this source tree.
                     </div>
                     
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                        <textarea id="message" name="message" placeholder="Message" required minlength="10"></textarea>
                     </div>
-
-                    <button type="submit" id="submitButton">Send Message</button>
+                    
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </section>

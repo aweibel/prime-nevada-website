@@ -25,21 +25,73 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle contact form submission
+    // Enhanced form validation
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const emailInput = document.getElementById('email');
+        const nameInput = document.getElementById('name');
+        const messageInput = document.getElementById('message');
+        
+        // Real-time email validation
+        emailInput.addEventListener('input', () => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailRegex.test(emailInput.value)) {
+                emailInput.setCustomValidity('');
+            } else {
+                emailInput.setCustomValidity('Please enter a valid email address');
+            }
+        });
+
+        // Real-time name validation
+        nameInput.addEventListener('input', () => {
+            const nameRegex = /^[A-Za-z\s]{2,}$/;
+            if (nameRegex.test(nameInput.value)) {
+                nameInput.setCustomValidity('');
+            } else {
+                nameInput.setCustomValidity('Please enter a valid name (minimum 2 characters, letters only)');
+            }
+        });
+
+        // Real-time message validation
+        messageInput.addEventListener('input', () => {
+            if (messageInput.value.length < 10) {
+                messageInput.setCustomValidity('Message must be at least 10 characters long');
+            } else {
+                messageInput.setCustomValidity('');
+            }
+        });
+
+        // Form submission handler
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Additional validation before submission
+            if (!contactForm.checkValidity()) {
+                return;
+            }
+
             // Show loading state
-            const submitButton = contactForm.querySelector('button[type="submit"]');
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
 
-            // Form will be handled by FormSubmit.co
-            // Re-enable the button after a short delay
-            setTimeout(() => {
+            try {
+                const response = await fetch('/submit-form.php', {
+                    method: 'POST',
+                    body: new FormData(contactForm)
+                });
+
+                if (response.ok) {
+                    window.location.href = '/thank-you';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
                 submitButton.textContent = 'Send Message';
                 submitButton.disabled = false;
-            }, 2000);
+            }
         });
     }
 

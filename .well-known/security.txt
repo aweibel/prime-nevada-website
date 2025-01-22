@@ -1,0 +1,5 @@
+Contact: mailto:security@primenevada.com
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Policy: https://primenevada.com/security-policy
+Canonical: https://primenevada.com/.well-known/security.txt
