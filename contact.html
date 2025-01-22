@@ -1,0 +1,100 @@
+<!--
+Copyright (c) 2024-present, Prime Nevada
+All rights reserved.
+
+This source code is licensed under the BSD 4-Clause license found in the
+LICENSE.md file in the root directory of this source tree.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Prime Nevada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="components/navigation/navigation.js"></script>
+    <script type="module" src="components/footer/footer.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <prime-navigation></prime-navigation>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/contact-hero.jpg" alt="Prime Nevada office" class="hero-background">
+            <div class="hero-content">
+                <h1>Connect with Us</h1>
+                <p>Join us in shaping Nevada's future. Reach out to explore partnership opportunities and discover how we can innovate together.</p>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="feature-content">
+                <h2>Let's Build Something Great</h2>
+                <p>We're always looking to connect with visionary founders, fellow investors, and potential partners who share our commitment to innovation and excellence in Nevada.</p>
+            </div>
+            <div class="feature-image">
+                <img src="images/contact-office.jpg" alt="Prime Nevada office space">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="contact-form">
+                <form id="contactForm" action="https://formsubmit.co/e5c7f883d84ddc1f31d865795df8900d" method="POST">
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display: none;">
+                    
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="true">
+                    
+                    <!-- Success Page -->
+                    <input type="hidden" name="_next" value="https://primenevada.com/thank-you">
+                    
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Company (Optional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+
+                    <button type="submit" id="submitButton">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>Las Vegas</h3>
+                    <p>Headquarters</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Response Time</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Global</h3>
+                    <p>Network</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <prime-footer></prime-footer>
+</body>
+</html>
