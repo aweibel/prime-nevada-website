@@ -1,27 +1,32 @@
+<!--
+Copyright (c) 2024-present, Prime Nevada
+All rights reserved.
+
+This source code is licensed under the BSD 4-Clause license found in the
+LICENSE.md file in the root directory of this source tree.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Prime Nevada - Investment firm focused on empowering Nevada's innovators through strategic investments in technology, real estate, and hospitality.">
-    <title>Prime Nevada - Empowering Nevada's Innovators</title>
+    <title>Prime Nevada - Investment Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="components/navigation/navigation.js"></script>
+    <script type="module" src="components/footer/footer.js"></script>
+    <script type="module" src="js/main.js"></script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header role="banner">
-        <nav role="navigation" aria-label="Main navigation">
-            <a href="/" class="logo" aria-label="Prime Nevada Home">PRIME NEVADA</a>
-            <button aria-label="Toggle menu" class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
-            <ul id="main-menu">
-                <li><a href="/firm" aria-label="Learn about our firm">THE FIRM</a></li>
-                <li><a href="/what-we-do" aria-label="Explore what we do">WHAT WE DO</a></li>
-                <li><a href="/contact" aria-label="Contact us">CONTACT</a></li>
-            </ul>
-        </nav>
+    <header>
+        <prime-navigation></prime-navigation>
     </header>
 
-    <main id="main-content" role="main">
+    <main>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <section class="hero" aria-labelledby="hero-title">
             <img src="images/hero-bg.jpg" alt="Aerial view of Las Vegas skyline at sunset" class="hero-background">
             <div class="hero-content">
@@ -102,25 +107,6 @@
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h2>Prime Nevada</h2>
-                <p>Building lasting value through thoughtful investment in Nevada's future</p>
-            </div>
-            <div class="footer-section">
-                <h2>Contact</h2>
-                <address>
-                    <p>Las Vegas, Nevada</p>
-                    <p><a href="tel:+17025551234" aria-label="Call our office">702-555-1234</a></p>
-                </address>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Prime Nevada. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="scripts/main.js"></script>
+    <prime-footer></prime-footer>
 </body>
 </html>

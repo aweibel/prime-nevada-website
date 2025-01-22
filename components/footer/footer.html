@@ -1,0 +1,33 @@
+<template id="prime-footer-template">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Prime Nevada</h4>
+                <p>Building lasting value through thoughtful investment in Nevada's future</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <slot name="address">
+                    <p>Las Vegas, Nevada</p>
+                    <p>Email: info@primenevada.com</p>
+                    <p>Phone: (702) 555-1234</p>
+                </slot>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <slot name="links">
+                    <ul>
+                        <li><a href="/firm">The Firm</a></li>
+                        <li><a href="/what-we-do">What We Do</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </slot>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <slot name="copyright">
+                <p>&copy; 2024-present Prime Nevada. All rights reserved.</p>
+            </slot>
+        </div>
+    </footer>
+</template>

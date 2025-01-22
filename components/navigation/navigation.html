@@ -1,0 +1,15 @@
+<template id="prime-navigation-template">
+    <nav>
+        <a href="/" class="logo" part="logo">
+            <slot name="logo">PRIME NEVADA</slot>
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+            <slot name="menu-text">Menu</slot>
+        </button>
+        <ul id="main-menu">
+            <li><a href="/firm">THE FIRM</a></li>
+            <li><a href="/what-we-do">WHAT WE DO</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</template>

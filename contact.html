@@ -1,21 +1,28 @@
+<!--
+Copyright (c) 2024-present, Prime Nevada
+All rights reserved.
+
+This source code is licensed under the BSD 4-Clause license found in the
+LICENSE.md file in the root directory of this source tree.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Prime Nevada</title>
+    <title>Contact - Prime Nevada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="components/navigation/navigation.js"></script>
+    <script type="module" src="components/footer/footer.js"></script>
+    <script type="module" src="js/main.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/" class="logo">PRIME NEVADA</a>
-            <ul>
-                <li><a href="/firm">THE FIRM</a></li>
-                <li><a href="/what-we-do">WHAT WE DO</a></li>
-                <li><a href="/contact">CONTACT</a></li>
-            </ul>
-        </nav>
+        <prime-navigation></prime-navigation>
     </header>
 
     <main>
@@ -88,31 +95,6 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Prime Nevada</h4>
-                <p>Building lasting value through thoughtful investment in Nevada's future</p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: info@primenevada.com</p>
-                <p>Location: Las Vegas, Nevada</p>
-            </div>
-            <div class="footer-section">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="/firm">The Firm</a></li>
-                    <li><a href="/what-we-do">What We Do</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Prime Nevada. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <prime-footer></prime-footer>
 </body>
 </html>

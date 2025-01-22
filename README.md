@@ -124,4 +124,6 @@ For questions or support:
 
 ## ⚖️ License
 
-© 2024 Prime Nevada. All rights reserved. This project is proprietary and confidential.
+This project is licensed under the BSD 4-Clause License - see the [LICENSE.md](LICENSE.md) file for details.
+
+Copyright (c) 2024-present, Prime Nevada. All rights reserved.
