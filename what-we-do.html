@@ -18,10 +18,10 @@ LICENSE.md file in the root directory of this source tree.
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
          
         <!-- Resource Hints -->
-        <link rel="preload" href="styles/main.css" as="style">
-        <link rel="preload" href="components/navigation/navigation.js" as="script">
-        <link rel="preload" href="components/footer/footer.js" as="script">
-        <link rel="preload" href="js/main.js" as="script">
+        <link rel="preload" href="styles/main.css" as="style" crossorigin="anonymous">
+        <link rel="preload" href="components/navigation/navigation.js" as="script" crossorigin="anonymous">
+        <link rel="preload" href="components/footer/footer.js" as="script" crossorigin="anonymous">
+        <link rel="preload" href="js/main.js" as="script" crossorigin="anonymous">
 
         <!-- SEO Meta Tags -->
         <title>Our Investment Approach | Prime Nevada</title>
@@ -47,11 +47,11 @@ LICENSE.md file in the root directory of this source tree.
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap&display=swap" rel="stylesheet">
         
         <!-- Styles -->
-        <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+        <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'" crossorigin="anonymous">
+        <noscript><link rel="stylesheet" href="styles/main.css" crossorigin="anonymous"></noscript>
         
         <!-- Components -->
         <script type="module" src="components/navigation/navigation.js" defer></script>
@@ -64,8 +64,8 @@ LICENSE.md file in the root directory of this source tree.
     </header>
 
     <main>
-        <section class="hero">
-            <img src="images/what-we-do-hero.jpg" alt="Investment process" class="hero-background">
+        <section class="hero" aria-labelledby="hero-title">
+            <img src="images/what-we-do-hero.jpg" alt="Prime Nevada investment portfolio" class="hero-background" loading="eager" decoding="async">
             <div class="hero-content">
                 <h1>Empowering Nevada's Innovators</h1>
                 <p>We partner with exceptional founders who dare to think differently, providing the capital, expertise, and connections needed to transform bold visions into market-leading companies.</p>
@@ -78,13 +78,13 @@ LICENSE.md file in the root directory of this source tree.
                 <p>We believe in backing visionary entrepreneurs who are reshaping industries through innovation. Our hands-on approach and deep market expertise enable us to be true partners in growth, not just capital providers.</p>
             </div>
             <div class="feature-image">
-                <img src="images/investment-approach.jpg" alt="Investment strategy meeting">
+                <img src="images/investment-approach.jpg" alt="Investment strategy meeting" loading="lazy" decoding="async">
             </div>
         </section>
 
         <section class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="images/stage-early.jpg" alt="Early Stage">
+                <img src="images/stage-early.jpg" alt="Early Stage" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Early Stage Ventures</h3>
                     <p>Supporting groundbreaking startups with seed and Series A funding, coupled with hands-on guidance to accelerate growth and market penetration.</p>
@@ -92,7 +92,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/stage-growth.jpg" alt="Growth Stage">
+                <img src="images/stage-growth.jpg" alt="Growth Stage" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Growth Capital</h3>
                     <p>Providing strategic capital and operational expertise to help established companies scale operations and capture market leadership.</p>
@@ -100,7 +100,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/stage-real-estate.jpg" alt="Real Estate">
+                <img src="images/stage-real-estate.jpg" alt="Real Estate" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Real Estate Innovation</h3>
                     <p>Investing in transformative real estate projects that redefine urban spaces and create sustainable, community-focused developments.</p>
@@ -108,7 +108,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/stage-special.jpg" alt="Special Situations">
+                <img src="images/stage-special.jpg" alt="Special Situations" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Special Opportunities</h3>
                     <p>Identifying and capitalizing on unique investment opportunities that offer exceptional potential for value creation.</p>
@@ -139,13 +139,13 @@ LICENSE.md file in the root directory of this source tree.
                 <p>Our partnership extends far beyond capital. We work closely with our portfolio companies to drive sustainable growth and create lasting value.</p>
             </div>
             <div class="feature-image">
-                <img src="images/value-add.jpg" alt="Value addition">
+                <img src="images/value-add.jpg" alt="Value addition" loading="lazy" decoding="async">
             </div>
         </section>
 
         <section class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="images/value-1.jpg" alt="Strategic Planning">
+                <img src="images/value-1.jpg" alt="Strategic Planning" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Strategic Vision</h3>
                     <p>Collaborating on high-level strategy and market positioning to maximize growth potential and competitive advantage.</p>
@@ -153,7 +153,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/value-2.jpg" alt="Operational Support">
+                <img src="images/value-2.jpg" alt="Operational Support" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Operational Excellence</h3>
                     <p>Providing hands-on operational support and best practices to optimize performance and scale efficiently.</p>
@@ -161,7 +161,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/value-3.jpg" alt="Network Access">
+                <img src="images/value-3.jpg" alt="Network Access" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Network Amplification</h3>
                     <p>Opening doors to our extensive network of industry leaders, potential customers, and strategic partners.</p>
@@ -169,7 +169,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/value-4.jpg" alt="Resource Access">
+                <img src="images/value-4.jpg" alt="Resource Access" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h3>Resource Optimization</h3>
                     <p>Facilitating access to key resources, talent, and expertise needed for sustainable growth.</p>

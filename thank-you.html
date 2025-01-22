@@ -18,10 +18,10 @@ LICENSE.md file in the root directory of this source tree.
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
          
         <!-- Resource Hints -->
-        <link rel="preload" href="styles/main.css" as="style">
-        <link rel="preload" href="components/navigation/navigation.js" as="script">
-        <link rel="preload" href="components/footer/footer.js" as="script">
-        <link rel="preload" href="js/main.js" as="script">
+        <link rel="preload" href="styles/main.css" as="style" crossorigin="anonymous">
+        <link rel="preload" href="components/navigation/navigation.js" as="script" crossorigin="anonymous">
+        <link rel="preload" href="components/footer/footer.js" as="script" crossorigin="anonymous">
+        <link rel="preload" href="js/main.js" as="script" crossorigin="anonymous">
         
         <!-- SEO Meta Tags -->
         <title>Thank You | Prime Nevada</title>
@@ -47,11 +47,11 @@ LICENSE.md file in the root directory of this source tree.
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap&display=swap" rel="stylesheet">
         
         <!-- Styles -->
-        <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+        <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'" crossorigin="anonymous">
+        <noscript><link rel="stylesheet" href="styles/main.css" crossorigin="anonymous"></noscript>
         
         <!-- Components -->
         <script type="module" src="components/navigation/navigation.js" defer></script>
@@ -64,11 +64,12 @@ LICENSE.md file in the root directory of this source tree.
     </header>
 
     <main>
-        <section class="section" style="text-align: center; padding: 100px 20px;">
-            <h1>Thank You!</h1>
-            <p>Your message has been sent successfully. We'll get back to you as soon as possible.</p>
-            <div style="margin-top: 30px;">
-                <a href="/" class="button">Return to Homepage</a>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <section class="hero" aria-labelledby="hero-title">
+            <img src="images/thank-you-hero.jpg" alt="Aerial view of Las Vegas skyline at sunset" class="hero-background" loading="eager" decoding="async">
+            <div class="hero-content">
+                <h1 id="hero-title">Thank You for Reaching Out</h1>
+                <p>We've received your message and will be in touch soon. At Prime Nevada, we value every connection and look forward to exploring opportunities together.</p>
             </div>
         </section>
     </main>

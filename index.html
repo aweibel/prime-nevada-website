@@ -18,10 +18,10 @@ LICENSE.md file in the root directory of this source tree.
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
          
         <!-- Resource Hints -->
-        <link rel="preload" href="styles/main.css" as="style">
-        <link rel="preload" href="components/navigation/navigation.js" as="script">
-        <link rel="preload" href="components/footer/footer.js" as="script">
-        <link rel="preload" href="js/main.js" as="script">
+        <link rel="preload" href="styles/main.css" as="style" crossorigin="anonymous">
+        <link rel="preload" href="components/navigation/navigation.js" as="script" crossorigin="anonymous">
+        <link rel="preload" href="components/footer/footer.js" as="script" crossorigin="anonymous">
+        <link rel="preload" href="js/main.js" as="script" crossorigin="anonymous">
 
         <!-- SEO Meta Tags -->
         <title>Prime Nevada - Investment Company | Building Nevada's Future</title>
@@ -47,11 +47,11 @@ LICENSE.md file in the root directory of this source tree.
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap&display=swap" rel="stylesheet">
         
         <!-- Styles -->
-        <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+        <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'" crossorigin="anonymous">
+        <noscript><link rel="stylesheet" href="styles/main.css" crossorigin="anonymous"></noscript>
         
         <!-- Components -->
         <script type="module" src="components/navigation/navigation.js" defer></script>
@@ -66,7 +66,7 @@ LICENSE.md file in the root directory of this source tree.
     <main>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <section class="hero" aria-labelledby="hero-title">
-            <img src="images/hero-bg.jpg" alt="Aerial view of Las Vegas skyline at sunset" class="hero-background">
+            <img src="images/hero-bg.jpg" alt="Aerial view of Las Vegas skyline at sunset" class="hero-background" loading="eager" decoding="async">
             <div class="hero-content">
                 <h1 id="hero-title">Fueling Nevada's Pioneers: Shaping the Future Together</h1>
                 <p>At Prime Nevada, we collaborate with visionary founders who are redefining technology, real estate, and hospitality across the Silver State. Our mission is to accelerate groundbreaking ideas that set new industry standards.</p>
@@ -75,7 +75,7 @@ LICENSE.md file in the root directory of this source tree.
 
         <section class="portfolio-grid" aria-label="Investment Portfolio">
             <div class="portfolio-item">
-                <img src="images/tech-investment.jpg" alt="Technology professionals collaborating in a modern office space">
+                <img src="images/tech-investment.jpg" alt="Technology professionals collaborating in a modern office space" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h2>Tech Revolution</h2>
                     <p>We invest in cutting-edge tech ventures that disrupt the norm and drive industry evolution, empowering bold ideas that challenge the status quo.</p>
@@ -83,7 +83,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/real-estate.jpg" alt="Modern architectural design of a sustainable commercial building">
+                <img src="images/real-estate.jpg" alt="Modern architectural development in Las Vegas" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h2>Next-Gen Real Estate</h2>
                     <p>Our real estate investments focus on avant-garde developments that blend modern design with functionality, creating spaces that inspire and endure.</p>
@@ -91,7 +91,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/hospitality.jpg" alt="Luxurious hotel lobby showcasing innovative design">
+                <img src="images/hospitality.jpg" alt="Luxury hotel interior showcasing Nevada hospitality" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h2>Innovative Hospitality</h2>
                     <p>We craft unique hospitality experiences that captivate guests, setting new benchmarks for excellence and redefining the art of service.</p>
@@ -99,7 +99,7 @@ LICENSE.md file in the root directory of this source tree.
             </div>
             
             <div class="portfolio-item">
-                <img src="images/sustainability.jpg" alt="Solar panels and green technology implementation">
+                <img src="images/sustainability.jpg" alt="Solar panels and green technology implementation" loading="lazy" decoding="async">
                 <div class="portfolio-content">
                     <h2>Sustainable Futures</h2>
                     <p>Our commitment to sustainability drives us to support eco-friendly innovations and green developments that pave the way for a cleaner, brighter future.</p>
@@ -113,7 +113,7 @@ LICENSE.md file in the root directory of this source tree.
                 <p>At Prime Nevada, we align with trailblazing founders to build companies that leave a lasting mark. By merging strategic capital with hands-on expertise and an expansive network, we turn visionary ideas into reality.</p>
             </div>
             <div class="feature-image">
-                <img src="images/feature-image.jpg" alt="Diverse team collaborating on innovative projects">
+                <img src="images/feature-image.jpg" alt="Diverse team collaborating on innovative projects" loading="lazy" decoding="async">
             </div>
         </section>
 
@@ -136,7 +136,7 @@ LICENSE.md file in the root directory of this source tree.
 
         <section class="feature-section" aria-labelledby="nevada-title">
             <div class="feature-image">
-                <img src="images/nevada-landscape.jpg" alt="Panoramic view of Nevada's diverse landscape">
+                <img src="images/nevada-landscape.jpg" alt="Panoramic view of Nevada's diverse landscape" loading="lazy" decoding="async">
             </div>
             <div class="feature-content">
                 <h2 id="nevada-title">Nevada: The Innovation Frontier</h2>

@@ -7,11 +7,24 @@
  */
 
 // Import components
-import './components/navigation.js';
-import './components/footer.js';
+import '../components/navigation/navigation.js';
+import '../components/footer/footer.js';
 
 // Main JavaScript functionality
 document.addEventListener('DOMContentLoaded', () => {
+    // Handle hero image loading
+    const heroImage = document.querySelector('.hero-background');
+    if (heroImage) {
+        heroImage.addEventListener('load', () => {
+            heroImage.classList.add('loaded');
+        });
+        
+        // If image fails to load, fallback is already in place via CSS
+        heroImage.addEventListener('error', () => {
+            console.error('Hero image failed to load');
+        });
+    }
+
     // Add smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
