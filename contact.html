@@ -84,9 +84,21 @@ LICENSE.md file in the root directory of this source tree.
 
         <section class="section">
             <div class="contact-form">
-                <form id="contactForm" action="/submit-form.php" method="POST">
+                <form id="contactForm" action="https://formsubmit.co/&#97;&#108;&#97;&#110;&#64;&#112;&#114;&#105;&#109;&#101;&#110;&#101;&#118;&#97;&#100;&#97;&#46;&#99;&#111;&#109;" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Prime Nevada">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_next" value="https://primenevada.com/thank-you">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Thank you for contacting Prime Nevada. We have received your message and will get back to you soon.">
+                    <input type="hidden" name="_dkim" value="true">
+                    <input type="hidden" name="_spam.threshold" value="5">
+                    
                     <!-- Honeypot -->
                     <input type="text" name="_honey" style="display: none;">
+                    
+                    <!-- Additional spam prevention -->
+                    <input type="checkbox" name="_blank" style="display: none;">
                     
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Name" required pattern="[A-Za-z\s]{2,}" title="Please enter a valid name (minimum 2 characters, letters only)">
@@ -128,5 +140,6 @@ LICENSE.md file in the root directory of this source tree.
     </main>
 
     <prime-footer></prime-footer>
+
 </body>
 </html>
