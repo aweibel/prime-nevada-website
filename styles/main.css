@@ -301,6 +301,7 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
     content-visibility: auto;
     contain-intrinsic-size: 1px 5000px;
+    border-bottom: 5px solid var(--color-brand-orange);
 }
 
 .portfolio-item:hover {
@@ -485,7 +486,7 @@ input:focus, textarea:focus {
     background-color: transparent;
 }
 
-button {
+button, .button {
     background-color: var(--color-brand-teal);
     color: var(--color-text-primary);
     border: none;
@@ -496,18 +497,21 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 3rem;
+    text-decoration: none;
+    display: inline-block;
 }
 
-button:hover {
+button:hover, .button:hover {
     background-color: var(--color-brand-orange);
     transform: translateY(-2px);
+    color: var(--color-text-primary);
 }
 
-button.secondary {
+button.secondary, .button.secondary {
     background-color: var(--color-brand-secondary);
 }
 
-button.secondary:hover {
+button.secondary:hover, .button.secondary:hover {
     background-color: var(--color-brand-teal);
 }
 
