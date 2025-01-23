@@ -1,6 +1,14 @@
+# Prime Nevada Robots.txt
 User-agent: *
 Allow: /
-Sitemap: https://primenevada.com/sitemap.xml
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
 
-# Optimize crawling
-Crawl-delay: 10
+# Specific rules for Bingbot
+User-agent: bingbot
+Allow: /
+Crawl-delay: 2
+
+# Sitemaps
+Sitemap: https://primenevada.com/sitemap.xml
