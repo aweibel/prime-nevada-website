@@ -11,6 +11,8 @@ LICENSE.md file in the root directory of this source tree.
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#000000">
+        <link rel="manifest" href="/manifest.json">
          
         <!-- Performance Optimizations -->
         <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -24,30 +26,33 @@ LICENSE.md file in the root directory of this source tree.
         <link rel="preload" href="js/main.js" as="script" crossorigin="anonymous">
 
         <!-- SEO Meta Tags -->
-        <title>Prime Nevada - Investment Company | Building Nevada's Future</title>
-        <meta name="description" content="Prime Nevada - Fueling Nevada's pioneers and shaping the future through strategic investments in technology, real estate, and hospitality.">
-        <meta name="keywords" content="Prime Nevada, investment company, Nevada investments, real estate investment, commercial development, Las Vegas investment">
+        <title>Prime Nevada | Acquiring & Transforming Nevada Businesses</title>
+        <meta name="description" content="Prime Nevada is a modern holding company dedicated to acquiring and transforming businesses across Nevada. We leverage technology, marketing expertise, and operational efficiencies to maximize profitability.">
+        <meta name="keywords" content="Prime Nevada, holding company, acquire,business acquisition, company transformation, Nevada businesses, operational efficiency, business growth, technology implementation">
         <meta name="author" content="Prime Nevada">
         <link rel="canonical" href="https://primenevada.com">
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://primenevada.com/">
-        <meta property="og:title" content="Prime Nevada - Fueling Nevada's Future">
-        <meta property="og:description" content="Collaborating with visionary founders who are redefining technology, real estate, and hospitality across the Silver State.">
+        <meta property="og:title" content="Prime Nevada - Transforming Nevada's Business Landscape">
+        <meta property="og:description" content="Prime Nevada acquires and transforms businesses through technology, marketing expertise, and operational efficiencies to drive growth and profitability.">
         <meta property="og:image" content="images/hero-bg.jpg">
         
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="https://primenevada.com/">
-        <meta name="twitter:title" content="Prime Nevada - Fueling Nevada's Future">
-        <meta name="twitter:description" content="Collaborating with visionary founders who are redefining technology, real estate, and hospitality across the Silver State.">
+        <meta name="twitter:title" content="Prime Nevada - Transforming Nevada's Business Landscape">
+        <meta name="twitter:description" content="Prime Nevada acquires and transforms businesses through technology, marketing expertise, and operational efficiencies to drive growth and profitability.">
         <meta name="twitter:image" content="images/hero-bg.jpg">
         
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=League+Spartan:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=League+Spartan:wght@500;600&family=Playfair+Display:wght@500;600&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!%&%20" rel="stylesheet" media="print" onload="this.media='all'">
+        <noscript>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=League+Spartan:wght@500;600&family=Playfair+Display:wght@500;600&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!%&%20" rel="stylesheet">
+        </noscript>
         
         <!-- Styles -->
         <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'" crossorigin="anonymous">
@@ -57,6 +62,21 @@ LICENSE.md file in the root directory of this source tree.
         <script type="module" src="components/navigation/navigation.js" defer></script>
         <script type="module" src="components/footer/footer.js" defer></script>
         <script type="module" src="js/main.js" defer></script>
+        
+        <!-- Service Worker Registration -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/js/service-worker.js')
+                        .then(registration => {
+                            console.log('ServiceWorker registration successful');
+                        })
+                        .catch(err => {
+                            console.log('ServiceWorker registration failed: ', err);
+                        });
+                });
+            }
+        </script>
         
         <!-- Google Analytics -->
         <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
@@ -74,11 +94,36 @@ LICENSE.md file in the root directory of this source tree.
     <main>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <section class="hero" aria-labelledby="hero-title">
-            <img src="images/hero-bg.jpg" alt="Aerial view of Las Vegas skyline at sunset" class="hero-background" loading="eager" decoding="async">
+            <img src="images/hero-bg.jpg" 
+                srcset="images/hero-bg-800.jpg 800w,
+                        images/hero-bg-1200.jpg 1200w,
+                        images/hero-bg-1600.jpg 1600w,
+                        images/hero-bg.jpg 2000w"
+                sizes="100vw"
+                alt="Aerial view of Las Vegas skyline at sunset" 
+                class="hero-background" 
+                loading="eager" 
+                decoding="async"
+                fetchpriority="high">
             <div class="hero-content">
-                <h1 id="hero-title">Fueling Nevada's Pioneers: Shaping the Future Together</h1>
-                <p>At Prime Nevada, we collaborate with visionary founders who are redefining technology, real estate, and hospitality across the Silver State. Our mission is to accelerate groundbreaking ideas that set new industry standards.</p>
-                <a href="/contact#contact" class="button">Partner with us Today</a>
+                <h1 id="hero-title">Investing in Businesses, Enhancing Efficiency, and Driving Profitability</h1>
+                <p>Prime Nevada is a modern holding company dedicated to acquiring and transforming businesses across Nevada. By leveraging cutting-edge technology, innovative marketing, and streamlined operations, we unlock untapped potential, maximize profitability, and create lasting value.</p>
+                <a href="/contact#contact" class="button">Partner with Us</a>
+            </div>
+        </section>
+
+        <section class="feature-section" aria-labelledby="impact-title">
+            <div class="feature-content">
+                <h2 id="impact-title">Our Mission: Transforming Businesses for Growth</h2>
+                <p>We specialize in acquiring businesses with unrealized potential and turning them into thriving enterprises. Our expertise lies in:</p>
+                <ul>
+                    <li>Integrating technology and AI to streamline operations and reduce costs</li>
+                    <li>Implementing innovative design and marketing strategies to drive growth</li>
+                    <li>Optimizing business processes to create value for stakeholders</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <img src="images/what-we-do.jpg" alt="Diverse team collaborating on innovative projects" loading="lazy" decoding="async">
             </div>
         </section>
 

@@ -13,9 +13,9 @@ nav {
 }
 
 .logo {
-    color: var(--color-text-primary, #ffffff);
+    color: var(--color-text-primary);
     text-decoration: none;
-    font-family: var(--font-heading, 'League Spartan', sans-serif);
+    font-family: 'League Spartan', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -30,9 +30,9 @@ ul {
 }
 
 li a {
-    color: var(--color-text-primary, #ffffff);
+    color: var(--color-text-primary);
     text-decoration: none;
-    font-family: var(--font-body, 'Inter', sans-serif);
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -41,21 +41,21 @@ li a {
 }
 
 li a:hover {
-    color: var(--color-brand-orange, #ff6b35);
+    color: var(--color-brand-orange);
 }
 
 .menu-toggle {
     display: none;
     padding: 0.8rem;
     background: transparent;
-    border: 1px solid var(--color-text-primary, #ffffff);
-    color: var(--color-text-primary, #ffffff);
-    font-family: var(--font-body, 'Inter', sans-serif);
-    cursor: pointer;
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -70,9 +70,9 @@ li a:hover {
         left: 0;
         right: 0;
         flex-direction: column;
-        background-color: var(--color-bg-overlay, rgba(0, 0, 0, 0.9));
+        background-color: var(--color-bg-overlay);
         padding: 1rem 0;
-        border-bottom: 1px solid var(--color-border-light, rgba(255, 255, 255, 0.1));
+        border-bottom: 1px solid var(--color-border-light);
     }
 
     ul.active {
