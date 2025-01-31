@@ -65,6 +65,51 @@ LICENSE.md file in the root directory of this source tree.
         
         <!-- Cookie Consent -->
         <script src="js/cookie-consent.js" defer crossorigin="anonymous"></script>
+        
+        <!-- Schema Markup -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "ContactPage",
+                    "@id": "https://primenevada.com/contact",
+                    "url": "https://primenevada.com/contact",
+                    "name": "Invest in Prime Nevada",
+                    "description": "Prime Nevada is actively acquiring businesses and partnering with investors to scale companies for long-term success. Whether you're looking to sell your business or invest in our portfolio, let's connect."
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://primenevada.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "The Firm",
+                            "item": "https://primenevada.com/firm"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "What We Do",
+                            "item": "https://primenevada.com/what-we-do"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "name": "Contact",
+                            "item": "https://primenevada.com/contact"
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
     </head>
 <body>
     <header>
