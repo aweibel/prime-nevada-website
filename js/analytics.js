@@ -7,36 +7,31 @@ window['ga-disable-G-2W7TN3797D'] = true;
 
 gtag('js', new Date());
 gtag('config', 'G-2W7TN3797D', {
-    'anonymize_ip': true, // Anonymize IP addresses
-    'allow_google_signals': false, // Disable Google signals until consent
-    'allow_ad_personalization_signals': false // Disable ad personalization
+    'anonymize_ip': true,
+    'allow_google_signals': false,
+    'allow_ad_personalization_signals': false
 });
 
 // Enhanced event tracking
-document.addEventListener('DOMContentLoaded', function() {
-    // Only track events if analytics is enabled
+document.addEventListener('DOMContentLoaded', () => {
     if (!window['ga-disable-G-2W7TN3797D']) {
-        // Track CTA button clicks
-        document.querySelectorAll('.button').forEach(button => {
-            button.addEventListener('click', function() {
+        // Track CTA button clicks using event delegation
+        document.addEventListener('click', e => {
+            const button = e.target.closest('.button');
+            if (button) {
                 gtag('event', 'click', {
                     'event_category': 'CTA',
-                    'event_label': this.textContent.trim(),
-                    'value': 1
+                    'event_label': button.textContent.trim()
                 });
-            });
+            }
         });
 
         // Track form submissions
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function() {
-                gtag('event', 'submit', {
-                    'event_category': 'Form',
-                    'event_label': 'Contact Form',
-                    'value': 1
-                });
+        document.getElementById('contactForm')?.addEventListener('submit', () => {
+            gtag('event', 'submit', {
+                'event_category': 'Form',
+                'event_label': 'Contact Form'
             });
-        }
+        });
     }
 });

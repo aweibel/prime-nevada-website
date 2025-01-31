@@ -1,6 +1,9 @@
 # Enable rewrite engine
 RewriteEngine On
 
+# Handle favicon.ico requests
+RewriteRule ^favicon\.ico$ - [L,R=404]
+
 # Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -33,7 +36,7 @@ Header set X-Frame-Options "SAMEORIGIN"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-Header set Content-Security-Policy "default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; form-action 'self' https://formsubmit.co; connect-src 'self' https://www.google-analytics.com;"
+Header set Content-Security-Policy "default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; form-action 'self' https://formsubmit.co; connect-src 'self' https://www.google-analytics.com;"
 
 # Rate limiting for form submissions
 <IfModule mod_ratelimit.c>
@@ -103,7 +106,13 @@ ErrorDocument 500 /500.html
 </FilesMatch>
 
 # Block access to backup and source files
-<FilesMatch "\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|old|mdb|json|config)$">
+<FilesMatch "\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist|old|mdb|config)$">
     Order allow,deny
     Deny from all
 </FilesMatch>
+
+# Set correct MIME type for manifest
+AddType application/manifest+json .json
+
+# Set correct MIME type for PNG
+AddType image/png .png
